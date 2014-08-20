@@ -21,7 +21,7 @@ Working with multiple persons on a website? Want to create beautiful notes? You 
 * Edit on dashboard
 * Add as many notes as you like
 * Drag & drop list items
-* No save button!
+* No save button needed!
 
 **Getting started**
 First download, install and activate the plugin. Go to your admin dashboard. Under ‚Screen Options’ (upper right corner) you’ll find a button ‚Add note‚ to create your first note.

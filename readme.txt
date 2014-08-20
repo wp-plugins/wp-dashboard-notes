@@ -8,13 +8,12 @@ Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Working with multiple persons on a website? Want to create beautiful notes? You can do just that with WP Dashboard Notes.
+Working with multiple persons on a website? Want to make notes? You can do just that with WP Dashboard Notes. Create beautiful notes with a nice user experience.
 
 == Description ==
 Working with multiple persons on a website? Want to make notes? You can do just that with WP Dashboard Notes. Create beautiful notes with a nice user experience.
 
-**Features:**
-
+Features:
 * Colored notes
 * List notes or regular notes
 * Public or private notes
@@ -22,10 +21,6 @@ Working with multiple persons on a website? Want to make notes? You can do just 
 * Add as many notes as you like
 * Drag & drop list items
 * No save button!
-
-**Getting started**
-
-Download, install and activate the plugin. After that you'll see a 'Add note' button at the 'Screen Options' of your dashboard.
 
 **Feature requests, ratings and donations are welcome and appreciated!**
 
@@ -42,6 +37,14 @@ A new note can be added in two ways.
 
 You could change the colors by overriding the style from another stylesheet. If you need help with this, ask in the support forums.
 
+= What does ‚visibility: Everyone mean’? =
+
+With WP Dashboard Notes you have two options, a note just for yourself or for everyone. Everyone means here, everyone who has access to the WordPress dashboard will see the note.
+
+= How can I change the note type (from/to list/regular note)? =
+
+When hovering over the note you’ll se a black bar appearing at the bottom of that note. The third icon in that bar will switch note types.
+
 == Installation ==
 
 1. Upload the folder `wp-dashboard-notes` to the `/wp-content/plugins/` directory.
@@ -56,5 +59,5 @@ You could change the colors by overriding the style from another stylesheet. If 
 
 == Changelog ==
 
-= 1.0.0 = 20/08/2014
+= 1.0.0 = 18/08/2014
 * Initial release

@@ -55,6 +55,7 @@ You could change the colors by overriding the style from another stylesheet. If 
 * Added ‚jquery-ui-sortable’ dependency
 	* Fixed sub-menu not showing up
 * Add check at js update note function
+* Added NL translation + loading translation files
 
 
 = 1.0.0 = 18/08/2014

@@ -43,6 +43,9 @@ class WP_Dashboard_Notes {
 		// Add note button
 		add_filter( 'manage_dashboard_columns', array( $this, 'wpdn_dashboard_columns' ) );
 
+		// Load textdomain
+		load_plugin_textdomain( 'wp-dashboard-notes', false, basename( dirname( __FILE__ ) ) . '/languages' );
+
 	}
 
 

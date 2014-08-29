@@ -4,23 +4,29 @@ Donate link: http://www.jeroensormani.com/donate/
 Tags: note, notes, dashboard notes, wordpress notes, admin note, private note, post it, notification, admin notification, collaboratin, workflow
 Requires at least: 3.8
 Tested up to: 3.9.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Working with multiple persons on a website? Want to make notes? You can do just that with WP Dashboard Notes. Create beautiful notes with a nice user experience.
+Working with multiple persons on a website? Want to create beautiful notes? You can do just that with WP Dashboard Notes.
 
 == Description ==
 Working with multiple persons on a website? Want to make notes? You can do just that with WP Dashboard Notes. Create beautiful notes with a nice user experience.
 
-Features:
+Working with multiple persons on a website? Want to create beautiful notes? You can do just that with WP Dashboard Notes.
+
+**Features:**
+
 * Colored notes
 * List notes or regular notes
 * Public or private notes
 * Edit on dashboard
 * Add as many notes as you like
 * Drag & drop list items
-* No save button!
+* No save button needed!
+
+**Getting started**
+First download, install and activate the plugin. Go to your admin dashboard. Under ‚Screen Options’ (upper right corner) you’ll find a button ‚Add note‚ to create your first note.
 
 **Feature requests, ratings and donations are welcome and appreciated!**
 
@@ -51,12 +57,13 @@ You could change the colors by overriding the style from another stylesheet. If 
 
 == Changelog ==
 
+= 1.0.2 = 29/08/2014
+* Fix - Safari compatibility issues
+
 = 1.0.1 = 28/08/2014
 * Added ‚jquery-ui-sortable’ dependency
 	* Fixed sub-menu not showing up
 * Add check at js update note function
-* Added NL translation + loading translation files
-
 
 = 1.0.0 = 18/08/2014
 * Initial release

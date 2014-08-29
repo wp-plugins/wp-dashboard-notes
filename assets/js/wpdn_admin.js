@@ -201,6 +201,10 @@ jQuery( document ).ready( function($) {
 		document.execCommand( 'selectAll', false, null );
 		e.stopPropagation();
 	});
+	// Prevent collapsing on title click
+	$( 'body, .postbox h3' ).on( 'click', '.wpdn-title', function( e ) {
+		e.stopPropagation();
+	});
 
 
 	// Note checkbox toggle

@@ -23,6 +23,14 @@ if ( ! is_admin() ) return; // Only load plugin when user is in admin
  */
 class WP_Dashboard_Notes {
 
+	/**
+	 * Version numer.
+	 *
+	 * @since 1.0.2
+	 *
+	 * @var string $version Plugin version number.
+	 */
+	public $version = '1.0.2';
 
 	/**
 	 * __construct function.
@@ -74,10 +82,10 @@ class WP_Dashboard_Notes {
 	public function wpdn_admin_enqueue_scripts() {
 
 		// Javascript
-		wp_enqueue_script( 'wpdn_admin_js', plugin_dir_url( __FILE__ ) . 'assets/js/wpdn_admin.js', array( 'jquery', 'jquery-ui-sortable' ) );
+		wp_enqueue_script( 'wpdn_admin_js', plugin_dir_url( __FILE__ ) . 'assets/js/wpdn_admin.js', array( 'jquery', 'jquery-ui-sortable' ), $this->version );
 
 		// Stylesheet
-		wp_enqueue_style( 'wpdn_admin_css', plugin_dir_url( __FILE__ ) . 'assets/css/wpdn_admin.css', array( 'dashicons' ) );
+		wp_enqueue_style( 'wpdn_admin_css', plugin_dir_url( __FILE__ ) . 'assets/css/wpdn_admin.css', array( 'dashicons' ), $this->version );
 
 	}
 

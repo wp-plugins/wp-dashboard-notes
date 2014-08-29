@@ -86,6 +86,10 @@ jQuery( document ).ready( function($) {
 		if ( t != '' ) {
 			post_id = $( t ).closest( ".postbox" ).attr( 'id' );
 		}
+		
+		if ( ! post_id ) {
+			return;
+		}
 
 		$( '#' + post_id + ' .wp-dashboard-note-options .status' ).html( loading_icon );
 		var data = {
@@ -195,6 +199,10 @@ jQuery( document ).ready( function($) {
 	$( 'body, .postbox h3' ).on( 'click', '.wpdn-edit-title', function( e ) {
 		$( this ).prev().focus();
 		document.execCommand( 'selectAll', false, null );
+		e.stopPropagation();
+	});
+	// Prevent collapsing on title click
+	$( 'body, .postbox h3' ).on( 'click', '.wpdn-title', function( e ) {
 		e.stopPropagation();
 	});
 

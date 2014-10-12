@@ -58,7 +58,7 @@ input[type=text].add-list-item:-ms-input-placeholder {
 	opacity: 1;
 }
 .list-item .dashicons-no-alt {
-	color: #ccc;
+	color: rgba( 0, 0, 0, 0.3 );
 	text-align: right;
 	float: right;
 	cursor: pointer;
@@ -150,6 +150,27 @@ h3.hndle:hover .dashicons {
 [id^=note_] .handlediv {
 	color: #222;
 	color: transparent;
+}
+
+/* Open Link */
+.wp-dashboard-note-wrap a {
+	position: relative;
+}
+.wp-dashboard-note-wrap :focus {
+	outline: none;
+}
+.link-hover {
+	background: rgba(76, 76, 76, 0.9);
+	position: absolute;
+	left: 0px;
+	top: 100%;
+	padding: 5px;
+	border-radius: 4px;
+	font-size: 12px;
+	z-index: 99;
+}
+.link-hover a {
+	color: white;
 }
 
 /* Saving */

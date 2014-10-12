@@ -86,7 +86,7 @@ jQuery( document ).ready( function($) {
 		if ( t != '' ) {
 			post_id = $( t ).closest( ".postbox" ).attr( 'id' );
 		}
-		
+
 		if ( ! post_id ) {
 			return;
 		}
@@ -201,10 +201,6 @@ jQuery( document ).ready( function($) {
 		document.execCommand( 'selectAll', false, null );
 		e.stopPropagation();
 	});
-	// Prevent collapsing on title click
-	$( 'body, .postbox h3' ).on( 'click', '.wpdn-title', function( e ) {
-		e.stopPropagation();
-	});
 
 
 	// Note checkbox toggle
@@ -229,5 +225,16 @@ jQuery( document ).ready( function($) {
 	})
 	.trigger( 'note-sortable' );
 
+
+	$( '.wp-dashboard-note-wrap a' ).hover( function() {
+
+		var url = $( this ).attr( 'href' );
+		$( this ).append( '<span class="link-hover" contenteditable="false"><a href="' + url + '" target="_blank" contenteditable="false">Open link</a></span>' );
+
+	}, function() {
+
+		$( '.link-hover' ).remove();
+
+	});
 
 });

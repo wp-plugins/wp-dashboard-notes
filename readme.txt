@@ -8,19 +8,20 @@ Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Working with multiple persons on a website? Want to make notes? You can do just that with WP Dashboard Notes. Create beautiful notes with a nice user experience.
+Working with multiple persons on a website? Want to create beautiful notes? You can do just that with WP Dashboard Notes.
 
 == Description ==
 Working with multiple persons on a website? Want to make notes? You can do just that with WP Dashboard Notes. Create beautiful notes with a nice user experience.
 
-Features:
+**Features:**
+
 * Colored notes
 * List notes or regular notes
 * Public or private notes
 * Edit on dashboard
 * Add as many notes as you like
 * Drag & drop list items
-* No save button!
+* No save button needed!
 
 **Feature requests, ratings and donations are welcome and appreciated!**
 

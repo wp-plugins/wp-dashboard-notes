@@ -58,7 +58,7 @@ input[type=text].add-list-item:-ms-input-placeholder {
 	opacity: 1;
 }
 .list-item .dashicons-no-alt {
-	color: #ccc;
+	color: rgba( 0, 0, 0, 0.3 );
 	text-align: right;
 	float: right;
 	cursor: pointer;
@@ -129,18 +129,15 @@ input[type=text].add-list-item:-ms-input-placeholder {
 [data-note-type=regular] .saved-icon .dashicons {
 	line-height: 1;
 }
-.wp-dashboard-note-wrap * {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-}
-
 .hndle span {
 	cursor: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	-o-user-select: text;
+	user-select: text;
 }
-h3.hndle .dashicons {
+h3.hndle .wpdn-edit-title {
 	display: none;
 	height: 19px;
 	color: #222;
@@ -155,13 +152,39 @@ h3.hndle:hover .dashicons {
 	color: transparent;
 }
 
+/* Open Link */
+.wp-dashboard-note-wrap a {
+	position: relative;
+}
+.wp-dashboard-note-wrap :focus {
+	outline: none;
+}
+.link-hover {
+	background: rgba(76, 76, 76, 0.9);
+	position: absolute;
+	left: 0px;
+	top: 100%;
+	padding: 5px;
+	border-radius: 4px;
+	font-size: 12px;
+	z-index: 99;
+}
+.link-hover a {
+	color: white;
+}
+
 /* Saving */
+.hndle .status {
+	float: right;
+}
 .saving-icon img {
 	vertical-align: middle;
 }
 .saved-icon,
 .saving-icon {
 	color: #222;
+	font-weight: normal;
+	font-size: 13px;
 }
 
 /* Add button screen options */
@@ -213,11 +236,6 @@ span.wpdn-color-note:hover .wpdn-color-palette {
 	border: 1px solid transparent;
 	margin: 2.5px;
 	display: inline-block;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
 }
 .color:hover {
 	border: 1px solid #ccc;

@@ -37,7 +37,7 @@ jQuery( document ).ready( function($) {
 	// Toggle visibility
 	$( 'body' ).on( 'click', '.wpdn-visibility', function() {
 
-		$( this ).toggleClass( 'dashicons-lock dashicons-groups' );
+		$( this ).toggleClass( 'dashicons-admin-users dashicons-groups' );
 
 		var visibility = $( this ).parent().attr( 'data-visibility' );
 		if ( 'public' == visibility ) {
@@ -87,7 +87,11 @@ jQuery( document ).ready( function($) {
 			post_id = $( t ).closest( ".postbox" ).attr( 'id' );
 		}
 
-		$( '#' + post_id + ' .wp-dashboard-note-options .status' ).html( loading_icon );
+		if ( ! post_id ) {
+			return;
+		}
+
+		$( '#' + post_id + ' .hndle .status' ).html( loading_icon );
 		var data = {
 			action: 			'wpdn_update_note',
 			post_id: 			post_id.replace( 'note_', '' ),
@@ -100,8 +104,8 @@ jQuery( document ).ready( function($) {
 		};
 
 		$.post( ajaxurl, data, function( response ) {
-			$( '#' + post_id + ' .wp-dashboard-note-options .status' ).html( saved_icon );
-			$( '#' + post_id + ' .wp-dashboard-note-options .status *' ).fadeOut( 1000, function() { $( this ).html( '' ) });
+			$( '#' + post_id + ' .hndle .status' ).html( saved_icon );
+			$( '#' + post_id + ' .hndle .status *' ).fadeOut( 1000, function() { $( this ).html( '' ) });
 		});
 
 	});
@@ -216,10 +220,23 @@ jQuery( document ).ready( function($) {
 			handle: '.wpdn-note-sortable',
 			update: function( event, ui ) {
 				$( this ).trigger( 'wpdn-update', this );
-			}
+			},
+			axis: 'y'
 		});
 	})
 	.trigger( 'note-sortable' );
 
+
+	// Open link box when hovering a link
+	$( '.wp-dashboard-note-wrap a' ).hover( function() {
+
+		var url = $( this ).attr( 'href' );
+		$( this ).append( '<span class="link-hover" contenteditable="false"><a href="' + url + '" target="_blank" contenteditable="false">Open link</a></span>' );
+
+	}, function() {
+
+		$( '.link-hover' ).remove();
+
+	});
 
 });

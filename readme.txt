@@ -8,20 +8,19 @@ Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Working with multiple persons on a website? Want to create beautiful notes? You can do just that with WP Dashboard Notes.
+Working with multiple persons on a website? Want to make notes? You can do just that with WP Dashboard Notes. Create beautiful notes with a nice user experience.
 
 == Description ==
 Working with multiple persons on a website? Want to make notes? You can do just that with WP Dashboard Notes. Create beautiful notes with a nice user experience.
 
-**Features:**
-
+Features:
 * Colored notes
 * List notes or regular notes
 * Public or private notes
 * Edit on dashboard
 * Add as many notes as you like
 * Drag & drop list items
-* No save button needed!
+* No save button!
 
 **Feature requests, ratings and donations are welcome and appreciated!**
 
@@ -140,19 +139,32 @@ function wpdn_add_style() {
 
 == Changelog ==
 
-= 1.0.3 = 21/09/2014
+= 1.0.4 = 19/10/2014
+
+* Fix - Notice on WP_DEBUG mode when creating new note
+* Fix - Wrong visibility icon when switching
+* Fix - Displaying colors on new notes/after switching
+* Improvement - Drag list items only vertically
+* Improvement - Move savig/saved icon to title bar
+*
+
+= 1.0.3 = 12/10/2014
+
 * Add - *beta* URLs are automatically clickable (after page refresh)
 * Improvement - Add filters to add your own colors
 * Improvement - Small improvements for coloring
 * Improvement - New icon for Personal visibility
 
 = 1.0.2 = 29/08/2014
+
 * Fix - Safari compatibility issues
 
 = 1.0.1 = 28/08/2014
+
 * Added ‚jquery-ui-sortable’ dependency
-	* Fixed sub-menu not showing up
+* Fixed sub-menu not showing up
 * Add check at js update note function
 
 = 1.0.0 = 18/08/2014
+
 * Initial release

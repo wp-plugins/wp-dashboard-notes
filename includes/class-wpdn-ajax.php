@@ -75,6 +75,15 @@ class WPDN_Ajax {
 
 		$note 		= get_post( $_POST['post_id'] );
 		$content	= apply_filters( 'wpdn_content', $note->post_content );
+		$colors		= apply_filters( 'wpdn_colors', array(
+			'white' 	=> '#fff',
+			'red'		=> '#f7846a',
+			'orange' 	=> '#ffbd22',
+			'yellow'	=> '#eeee22',
+			'green' 	=> '#bbe535',
+			'blue' 		=> '#66ccdd',
+			'black' 	=> '#777777',
+		) );
 		$note_meta 	= WP_Dashboard_Notes::wpdn_get_note_meta( $note->ID );
 
 		?>
@@ -109,40 +118,52 @@ class WPDN_Ajax {
 			'post_title' 	=> __( 'New note', 'wp-dashboard-notes' ),
 		);
 		$post_id = wp_insert_post( $args );
-		
-		$note 		= (object) array( 'post_content' => '' );
-		$note_meta	= array(
+
+		$note 		= (object) array( 'ID' => $post_id, 'post_content' => '' );
+		$note_meta	= apply_filters( 'wpdn_new_note_meta', array(
 			'color' 		=> '#ffffff',
 			'color_text' 	=> 'white',
 			'visibility' 	=> 'Everyone',
 			'note_type' 	=> 'list',
-		);
-		$note_meta = apply_filters( 'wpdn_new_note_meta', $note_meta );
+		) );
+		$content	= apply_filters( 'wpdn_content', $note->post_content );
+		$colors		= apply_filters( 'wpdn_colors', array(
+			'white' 	=> '#fff',
+			'red'		=> '#f7846a',
+			'orange' 	=> '#ffbd22',
+			'yellow'	=> '#eeee22',
+			'green' 	=> '#bbe535',
+			'blue' 		=> '#66ccdd',
+			'black' 	=> '#777777',
+		) );
+		$note_meta 	= apply_filters( 'wpdn_new_note_meta', $note_meta );
 		update_post_meta( $post_id, '_note', $note_meta );
 
 		ob_start(); ?>
-		
+
 		<div id='note_<?php echo $post_id; ?>' class='postbox'>
 			<div class='handlediv' title='Click to toggle'><br></div>
 			<h3 class="hndle">
 				<span>
 					<span contenteditable="true" class="wpdn-title"><?php _e( 'New note', 'wp-dashboard-notes' ); ?></span>
 					<div class="wpdn-edit-title dashicons dashicons-edit"></div>
+					<span class="status"></span>
 				</span>
 			</h3>
 
 			<div class='inside'>
-			
+
 			<style>
+				#note_<?php echo $post_id; ?> { background-color: <?php echo $note_meta['color']; ?>; }
 				#note_<?php echo $post_id; ?> .hndle { border: none; }
 			</style>
-			
+
 				<?php if ( 'regular' == $note_meta['note_type'] ) :
 					require plugin_dir_path( __FILE__ ) . 'templates/note.php';
 				else :
 					require plugin_dir_path( __FILE__ ) . 'templates/note-list.php';
 				endif; ?>
-				
+
 			</div> <!-- .inside -->
 		</div> <!-- .postbox -->
 
